@@ -1,0 +1,115 @@
+body {
+    background-image: url("https://images2.imgbox.com/c4/56/yOrOBtnu_o.jpg");
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    font-family: "Source Sans Pro", sans-serif;
+  }
+  
+  h1, h3, h4 {
+    color: #fff;
+    text-align: center;
+  }
+  
+  .row {
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+    grid-column-gap: 1%;
+  }
+  
+  .thumbnail {
+    justify-self: center;
+    transition: 0.5s;
+  }
+  
+  .photoContainer {
+    border: 10px solid #000;
+    text-align: center;
+    position: relative;
+    transform: perspective(500px) rotateY(5deg);
+    width: 90%;
+  }
+  
+  .photoContainer:hover {
+    animation-name: thumbTitle;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    transition-timing-function: ease-in;
+  }
+  
+  @keyframes thumbTitle {
+    0% {
+      transform: perspective(500px) rotateY(5deg) scale(1);
+    }
+    20% {
+      transform: perspective(500px) rotateY(-10deg) scale(1.1);
+    }
+    100% {
+      transform: perspective(500px) rotateY(0deg) scale(1.2);
+    }
+  }
+  .photoContainer:hover .photoInfo {
+    animation-name: infoSlide;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    transition-timing-function: ease-in;
+  }
+  
+  @keyframes infoSlide {
+    0% {
+      opacity: 0;
+      transform: translateX(2.4em);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+      visibility: visible;
+    }
+  }
+  .photoContainer a {
+    display: block;
+    width: 230px;
+    height: 308px;
+    text-decoration: none;
+  }
+  
+  .photoContainer a img {
+    width: 100%;
+    opacity: 0.5;
+  }
+  
+  .photoContainer a img:hover {
+    animation-name: imgTransparency;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    transition-timing-function: ease-in;
+  }
+  
+  @keyframes imgTransparency {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .photoInfo {
+    background-color: #000;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    visibility: hidden;
+  }
+  
+  .photoInfo h3 {
+    margin: 7px 10px;
+    font-weight: normal;
+  }
+  
+  .photoInfo .paintingDate {
+    text-decoration: none;
+    color: #7c7c7c;
+    font-size: 15px;
+    padding: 2px;
+  }

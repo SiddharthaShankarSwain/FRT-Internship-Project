@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> order form</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800'><link rel="stylesheet" href="css/order.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<form id="myform">
+  <header>Order Form</header>
+  <h5 style="color: aliceblue;">Choose Sample Pics <a href="gallery.html">Click Here</a></h5>
+  <div class="area">
+    <div class="row">
+      <div class="col2">
+        <input type="text" name="firstname">
+        <label for="fistname">First Name</label>
+      </div>
+      <div class="col2">
+        <input type="text" name="lastname">
+        <label for="lastname">Last Name</label>
+      </div>
+    </div>
+    <div class="row">
+      <input type="text" name="phone" id="phone">
+      <label for="phone">Phone</label>
+    </div>
+    <div class="row">
+      <input type="text" name="address" id="address">
+      <label for="address">Address</label>
+    </div>
+
+  </div>
+  <div class="area">
+    <div class="ckeckarea">
+      <input type="checkbox" name="checkbox1" id="checkbox1" onclick="autofilling(this.form)">
+      <label for="checkbox1">Check this box if order info is correct.</label>
+    </div>
+    <div class="row">
+      <div class="row">
+        <input type="text" name="newaddress" id="newaddress">
+        <label for="newaddress">Select What service do want ?</label>
+      </div>
+      
+    </div>
+    <div class="row">
+      <input type="text" name="newaddress" id="newaddress">
+      <label for="newaddress">Description About Your Order</label>
+    </div>
+
+    <div class="row">
+      <input type="file" name="newaddress" id="newaddress">
+      <label for="newaddress">Choose Sample File</label>
+    </div>
+
+    <div class="row">
+      <input type="range" name="newaddress" id="newaddress">
+      <label for="newaddress">Rate Us</label>
+    </div>
+  </div>
+  <div class="row">
+    <input type="submit" value="Submit" class="btn">
+    <input type="submit" value="cancel" class="btn">
+  </div>
+</form>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="script.js"></script>
+
+</body>
+</html>
